@@ -1,0 +1,33 @@
+.wrapper >div{
+    background-color: #eee;
+    padding: 10px;
+}
+
+.wrapper >div:nth-child(odd){
+    background-color: #ddd;
+}
+
+.wrapper {
+    display: grid;
+    /* grid-template-columns: 40% 30% 30%;    =100% */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr 1fr) ; */
+    
+    grid-gap: 1em;
+
+    /* grid-auto-rows: 100px; */
+    grid-auto-rows:minmax(100px, auto);
+}
+
+.nasted >div{
+    border: black solid 1px;
+    padding: 1em;
+}
+
+.nasted {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: 100px;
+}
